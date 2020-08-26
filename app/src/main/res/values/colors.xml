@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+
+
+
+    <color name="linkColor">#1235FB</color>
+    <color name="orange">#FF9800</color>
+    <color name="green">#ff009689</color>
+
+    <color name="darkBlue">#0911B1</color>
+    <color name="lightBlue">#1EE3F5</color>
+    <color name="black">#000000</color>
+    <color name="whiteDark">#DFDEDE</color>
+    <color name="whiteDarkLite">#F6F6F6</color>
+    <color name="gray">#D3D2D2</color>
+    <color name="grayLight">#F4F4F4</color>
+    <color name="gray2">#888787</color>
+    <color name="gray3">#5E5E5E</color>
+    <color name="yelo">#FFEB3B</color>
+
+
+    <color name="yellow">#F6BB42</color>
+    <color name="yellow3">#FAD23C</color>
+    <color name="blue">#38B1F3</color>
+    <color name="grey">#F3F3F3</color>
+    <color name="light_green">#37BC9B</color>
+    <color name="catagery_name">#59438F</color>
+    <color name="full">#2F8BAD</color>
+    <color name="medium">#7761AE</color>
+    <color name="small">#C39434</color>
+    <color name="eight">#2FA084</color>
+    <color name="twelve">#BA3A47</color>
+    <color name="test">#642DD5</color>
+
+    <color name="greenPrimary">#03FD1C</color>
+    <color name="colorPink">#D81B60</color>
+    <color name="colorGreenDark">#00574B</color>
+    <color name="pink">#C9F8A1</color>
+    <color name="grey2">#D6D4D4</color>
+    <color name="greyText">#88888A</color>
+
+    <color name="overlay_dark_10">#1A000000</color>
+    <color name="overlay_dark_20">#33000000</color>
+    <color name="red">#ff00</color>
+    <color name="ligth_green2">#AAFA9C</color>
+    <color name="ligth_yellow">#FAF591</color>
+    <color name="ligth_Blue">#600CE8</color><!--F6A652-->
+    <color name="occupied">#F6BB42</color>
+    <color name="yellow2">#FBBD49</color>
+    <color name="VACANT">#37BC9B</color>
+    <color name="yellow_600">#FDD835</color>
+    <color name="grey_60">#666666</color>
+    <color name="blackLite">#123039</color>
+    <color name="backColor">#deffffff</color>
+    <color name="logoPink">#F3649C</color>
+    <color name="logoYellow">#D5BC49</color>
+    <color name="logoLiteBlue">#49E5AA</color>
+    <color name="logoDarkBlue">#249AE7</color>
+</resources>

@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.SingUpActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/sing_up"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/white"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:text="@string/select_language"
+                        android:textColor="@color/white"
+                        />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/cbEng"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="@string/english"
+                            android:buttonTint="@color/white"
+                            />
+                        <CheckBox
+                            android:id="@+id/cbHindi"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="हिन्दी"
+                            android:buttonTint="@color/white"
+
+                            />
+                        <CheckBox
+                            android:id="@+id/cbGuj"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:text="ગુજરતી"
+                            android:buttonTint="@color/white"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="16dp"
+                        android:hint="@string/name"
+                        android:inputType="textCapWords"
+                        android:maxLength="50"
+                        android:typeface="serif" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/LoginTextInputLayoutStyle"
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/MobileCompelsory"
+                            android:drawablePadding="16dp"
+                            android:inputType="number"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_id"
+                        android:inputType="textEmailAddress"
+                        android:drawablePadding="16dp"
+                        android:maxLength="70" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:drawablePadding="16dp"
+                        android:hint="@string/addressCo"
+                        android:inputType="textCapWords"
+                        android:maxLength="200" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/LoginTextInputLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+
+                    app:passwordToggleTint="@color/black">
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/passwordCompelsory"
+
+                        android:inputType="numberPassword"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+
+                       android:layout_marginBottom="5dp"
+                       android:background="@color/white"
+                       android:gravity="center"
+                       android:padding="2dp"
+                       android:paddingLeft="5dp"
+                       android:text="Payment Details (if you want to show in bill)"
+                       android:textColor="@color/black"
+                       android:textSize="16sp"
+                       android:textStyle="bold" />
+
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       style="@style/LoginTextInputLayoutStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <EditText
+                           android:id="@+id/etAccountHolder"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="Account Holder Name"
+
+                           android:inputType="textCapWords"
+                           android:maxLength="50" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       style="@style/LoginTextInputLayoutStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <EditText
+                           android:id="@+id/etAccountNo"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+
+                           android:hint="Accout Number"
+                           android:inputType="number"
+                           android:maxLength="30" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       style="@style/LoginTextInputLayoutStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <EditText
+                           android:id="@+id/etBankName"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+
+                           android:hint="Bank Name"
+                           android:inputType="textCapWords" />
+                   </com.google.android.material.textfield.TextInputLayout>
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       style="@style/LoginTextInputLayoutStyle"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <EditText
+                           android:id="@+id/etIFSC"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:hint="IFSC Code"
+                           android:inputType="textCapCharacters"
+                           android:maxLength="11" />
+                   </com.google.android.material.textfield.TextInputLayout>
+   -->
+                <Button
+                    android:id="@+id/btnSingUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_back"
+                    android:text="@string/sing_up"
+
+                    android:textColor="@color/white" />
+
+                <!--
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="20dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="skipRegistration"
+                                        android:text="@string/skip"
+                                        android:textColor="@color/white"
+                                        style="@style/editText"
+
+                                        android:textSize="17sp" />
+
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:onClick="help"
+                                        android:text="@string/help"
+                                        style="@style/editText"
+
+                                        android:textColor="@color/white"
+                                        android:textSize="17sp" />
+
+                                </LinearLayout>
+                -->
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <!--
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <com.eyalbira.loadingdots.LoadingDots
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                app:LoadingDots_auto_play="true"
+                app:LoadingDots_dots_color="@color/colorPrimary"
+                app:LoadingDots_dots_space="4dp" />
+
+
+        </LinearLayout>
+    -->
+
+</RelativeLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:fontFamily="cursive"/>
+    <!--
+        Shree\nSai Super Store
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="20dp"
+
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+
+            android:orientation="vertical"
+            android:layout_below="@id/tvTitle">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_margin="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/mobile"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:textColor="@color/black"
+                    android:typeface="serif" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                android:layout_margin="15dp"
+
+                app:passwordToggleTint="@color/black">
+
+                <EditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:inputType="numberPassword"
+                    android:maxLength="30" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <CheckBox
+                android:id="@+id/chkRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                android:layout_marginLeft="15dp"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login"
+                android:onClick="goToLogin"
+                android:background="@drawable/btn_back"
+                android:layout_margin="15dp"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_create"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:onClick="goToSingUp"
+                />
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!--
+        <LinearLayout
+            android:id="@+id/llProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="5dp"
+            android:orientation="vertical">
+
+            <com.eyalbira.loadingdots.LoadingDots
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                app:LoadingDots_auto_play="true"
+                app:LoadingDots_dots_color="@color/colorPrimary"
+                app:LoadingDots_dots_space="4dp" />
+
+
+        </LinearLayout>
+    -->
+
+</RelativeLayout>
