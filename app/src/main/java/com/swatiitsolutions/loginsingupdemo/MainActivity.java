@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
         try {
             sharedPreferences = getSharedPreferences("Preferences", MODE_PRIVATE);
 
+            if (sharedPreferences.getBoolean("isLogin", false)) {
+                startActivity(new Intent(MainActivity.this,WelcomActivity.class));
+            }
             progressDialog = new ProgressDialog(this);
             progressDialog.setTitle(getString(R.string.wait));
             progressDialog.setMessage(getString(R.string.loading));

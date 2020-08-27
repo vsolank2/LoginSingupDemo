@@ -21,8 +21,6 @@ public class CustomerViewModel extends AndroidViewModel {
         return mRepository.postCustomer(flag,  customer_name,  mobile,  email,  address,  password, user_type);
     }
 
-
-
     public LiveData<ClsLoginResponse> login(String mobile, String password, String fcmToken){
         return mRepository.login(mobile, password,fcmToken);
     }

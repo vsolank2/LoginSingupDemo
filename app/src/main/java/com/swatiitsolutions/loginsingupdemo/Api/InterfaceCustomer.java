@@ -46,6 +46,4 @@ public interface InterfaceCustomer {
                                            @Field("id") String id);
 */
 }
-/*
 
-   */

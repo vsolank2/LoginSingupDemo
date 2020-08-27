@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:textSize="40sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:gravity="center"
         android:text="@string/app_name"
@@ -78,8 +78,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/remember_me"
                 android:layout_marginLeft="15dp"
-                android:buttonTint="@color/white"
-                android:textColor="@color/white"
+                android:buttonTint="@color/black"
+                android:textColor="@color/black"
                 android:textSize="18sp" />
 
             <Button

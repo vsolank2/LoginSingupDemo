@@ -13,25 +13,24 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     private static Retrofit retrofit;
-   // private static final String BASE_URL = "https://swatiitsolutions.000webhostapp.com/SaiStoreWebProject/api/"; //vsol
     private static final String BASE_URL = "https://saisuperstore.000webhostapp.com/SaiStoreWebProject/api/"; //44
 
     public static Retrofit getRetrofitInstance() {
-        if (retrofit == null) {
+       /* if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(getRequestHeader())
                     .build();
         }
-        return retrofit;
-       /* if (retrofit == null) {
+        return retrofit;*/
+        if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
-        return retrofit;*/
+        return retrofit;
     }
     private static OkHttpClient getRequestHeader() {
 

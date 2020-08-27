@@ -33,7 +33,6 @@ public class SingUpActivity extends AppCompatActivity {
     CustomerViewModel customerViewModel;
     EditText etName,etPhone,etEmail,etAddress,etPassword;
     private SharedPreferences sharedPreferences;
-    CheckBox cbEng,cbHindi,cbGuj;
     // String currentLanguage = "en", currentLang = "";
     Locale myLocale;
     // private LinearLayout llProgress;
@@ -53,9 +52,7 @@ public class SingUpActivity extends AppCompatActivity {
             etAddress=findViewById(R.id.etAddress);
             etPassword=findViewById(R.id.etPassword);
             btnSingUp=findViewById(R.id.btnSingUp);
-            cbGuj=findViewById(R.id.cbGuj);
-            cbHindi=findViewById(R.id.cbHindi);
-            cbEng=findViewById(R.id.cbEng);
+
             if (getSupportActionBar() != null) {
                 getSupportActionBar().hide();
             }
@@ -70,59 +67,60 @@ public class SingUpActivity extends AppCompatActivity {
             btnSingUp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    getCustomerInfo();
 
                     postCustomer();
                 }
             });
-            cbCheck();
+           // cbCheck();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
 
-    private void cbCheck(){
-        try {
-            cbEng.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if(cbEng.isChecked()){
-                        cbHindi.setChecked(false);
-                        cbGuj.setChecked(false);
-                        setLocale("en");
+//    private void cbCheck(){
+//        try {
+//            cbEng.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                    if(cbEng.isChecked()){
+//                        cbHindi.setChecked(false);
+//                        cbGuj.setChecked(false);
+//                        setLocale("en");
+//
+//                    }
+//                }
+//            });
+//
+//            cbHindi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                    if(cbHindi.isChecked()){
+//                        cbEng.setChecked(false);
+//                        cbGuj.setChecked(false);
+//                        setLocale("hi");
+//                    }
+//                }
+//            });
+//
+//            cbGuj.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//                @Override
+//                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+//                    if(cbGuj.isChecked()){
+//                        cbHindi.setChecked(false);
+//                        cbEng.setChecked(false);
+//                        setLocale("gu");
+//                    }
+//                }
+//            });
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        //  getLocale();
+//    }
 
-                    }
-                }
-            });
 
-            cbHindi.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if(cbHindi.isChecked()){
-                        cbEng.setChecked(false);
-                        cbGuj.setChecked(false);
-                        setLocale("hi");
-                    }
-                }
-            });
-
-            cbGuj.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                @Override
-                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                    if(cbGuj.isChecked()){
-                        cbHindi.setChecked(false);
-                        cbEng.setChecked(false);
-                        setLocale("gu");
-                    }
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        //  getLocale();
-    }
 //    public void storeCustomer(ClsCustomerResponse clsCustomerResponse, int id){
 //        try {
 //            SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -137,40 +135,6 @@ public class SingUpActivity extends AppCompatActivity {
 //            e.printStackTrace();
 //        }
 //    }
-
-    public void skipRegistration(View view) {
-    }
-
-    public void help(View view) {
-    }
-
-    public void getCustomerInfo(){
-
-    }
-
-    public void setLocale(String lang) {
-        try {
-            myLocale = new Locale(lang);
-            Resources res = getResources();
-            DisplayMetrics dm = res.getDisplayMetrics();
-            Configuration conf = res.getConfiguration();
-            conf.locale = myLocale;
-            res.updateConfiguration(conf, dm);
-            Intent refresh = new Intent(SingUpActivity.this, SingUpActivity.class);
-
-            SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putString("MyLang",lang);
-            editor.commit();
-            // refresh.putExtra("MyLang", lang);
-            startActivity(refresh);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
 
 
     public void postCustomer(){
@@ -242,7 +206,6 @@ public class SingUpActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.enterEmail, Toast.LENGTH_SHORT).show();
                 invalid = true;
             }
-
         }
 
         if (etPassword.getText().toString() == null || etPassword.getText().toString().equals("")) {

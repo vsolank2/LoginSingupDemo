@@ -8,7 +8,6 @@ import android.widget.Toast;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.google.gson.Gson;
 import com.swatiitsolutions.loginsingupdemo.Login.ClsLoginResponse;
 import com.swatiitsolutions.loginsingupdemo.R;
 import com.swatiitsolutions.loginsingupdemo.SingIn.ClsSingInResponse;
@@ -19,7 +18,6 @@ import retrofit2.Response;
 
 public class Repository {
     private Context context;
-    //    private ClsUserInfo obj = new ClsUserInfo();
     private SharedPreferences sharedPreferences;
 
     public Repository(Context context) {
@@ -35,35 +33,26 @@ public class Repository {
 
         Call<ClsSingInResponse> call = interfaceCustomer.postCustomer(flag, customer_name, mobile, email, address, password, user_type);
 
-
         call.enqueue(new Callback<ClsSingInResponse>() {
             @Override
             public void onResponse(Call<ClsSingInResponse> call, Response<ClsSingInResponse>
                     response) {
 
                 if (response.body() != null) {
-
                     customerResponse.postValue(response.body());
-
-
                 } else {
                     Toast.makeText(context, R.string.somethingWrong, Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<ClsSingInResponse> call, Throwable t) {
                 try {
                     customerResponse.postValue(null);
-
                 } catch (Exception e) {
                     e.printStackTrace();
-
                 }
-
             }
         });
-
         return customerResponse;
     }
 
@@ -72,9 +61,7 @@ public class Repository {
         final MutableLiveData<ClsLoginResponse> customerResponse = new MutableLiveData<>();
         InterfaceCustomer interfaceCustomer = ApiClient.getRetrofitInstance().create(InterfaceCustomer.class);
 
-
         Call<ClsLoginResponse> call = interfaceCustomer.login(mobile, password, fcmToken);
-
 
         call.enqueue(new Callback<ClsLoginResponse>() {
             @Override
@@ -87,19 +74,15 @@ public class Repository {
                     Toast.makeText(context, R.string.somethingWrong, Toast.LENGTH_SHORT).show();
                 }
             }
-
             @Override
             public void onFailure(Call<ClsLoginResponse> call, Throwable t) {
                 try {
                     customerResponse.postValue(null);
-
                 } catch (Exception e) {
                     e.printStackTrace();
-
                 }
             }
         });
-
         return customerResponse;
     }
 
